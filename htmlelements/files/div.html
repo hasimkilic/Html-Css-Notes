@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Uygulama</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: #f1f1f1;
+        }
+        
+        .box {
+            background-color: white;
+            margin-bottom: 15px;
+            padding: 20px;
+        }
+        
+        #Container {
+            width: 1140px;
+            margin: 20px auto;
+        }
+        
+        #blog-post-container {
+            width: 70%;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .blog-post {
+            position: relative;
+            display: inline-block;
+        }
+        
+        #others-post {
+            width: 25%;
+            display: inline-block;
+        }
+        
+        #authoer-box {
+            width: 200px;
+            margin-top: 25px;
+            margin-left: 5px;
+        }
+        
+        .tags li {
+            display: inline-block;
+            list-style-type: none;
+        }
+        
+        .date {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+        }
+        
+        .box {
+            position: fixed;
+            top: 200px;
+            right: 10px;
+        }
+        
+        h3 {
+            border-bottom: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Container">
+        <div id="blog-post-container">
+            <div class="blog-post">
+                <div class="blog-post box ">
+                    <h2>My First Blog Post</h2>
+                    <p class="date">
+                        10.10.2020
+                    </p>
+                    <p class="blog-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quisquam aut commodi, impedit dicta doloribus corrupti quibusdam autem mollitia labore blanditiis est! Temporibus incidunt aliquam voluptatibus cupiditate tempora necessitatibus.<br><br>Lorem
+                        ipsum dolor sit, amet consectetur adipisicing elit. Nobis optio atque quibusdam facilis libero qui? Ipsam, ab natus, autem maiores deserunt nemo fugiat eos odit distinctio nam modi harum sequi.
+                    </p>
+                    <ul class="tags">
+                        <li>Asp.net</li>
+                        <li>Angular</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div id="blog-post-container">
+                <div class="blog-post box">
+                    <h2>My First Blog Post</h2>
+                    <p class="date">
+                        10.10.2020
+                    </p>
+                    <p class="blog-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quisquam aut commodi, impedit dicta doloribus corrupti quibusdam autem mollitia labore blanditiis est! Temporibus incidunt aliquam voluptatibus cupiditate tempora necessitatibus.<br><br>Lorem
+                        ipsum dolor sit, amet consectetur adipisicing elit. Nobis optio atque quibusdam facilis libero qui? Ipsam, ab natus, autem maiores deserunt nemo fugiat eos odit distinctio nam modi harum sequi.
+                    </p>
+                    <ul class="tags">
+                        <li>C#</li>
+                        <li>Javascript</li>
+                        <li>Knouctjs</li>
+                        <li>Express.js</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="blog-post-container">
+                <div class="blog-post box">
+                    <h2>My First Blog Post</h2>
+                    <p class="date">
+                        10.10.2020
+                    </p>
+                    <p class="blog-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quisquam aut commodi, impedit dicta doloribus corrupti quibusdam autem mollitia labore blanditiis est! Temporibus incidunt aliquam voluptatibus cupiditate tempora necessitatibus.<br><br>Lorem
+                        ipsum dolor sit, amet consectetur adipisicing elit. Nobis optio atque quibusdam facilis libero qui? Ipsam, ab natus, autem maiores deserunt nemo fugiat eos odit distinctio nam modi harum sequi.
+                    </p>
+                    <ul class="tags">
+                        <li>C#</li>
+                        <li>Javascript</li>
+                        <li>Knouctjs</li>
+                        <li>Express.js</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="blog-post-container">
+                <div class="blog-post box">
+                    <h2>My First Blog Post</h2>
+                    <p class="date">
+                        10.10.2020
+                    </p>
+                    <p class="blog-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quisquam aut commodi, impedit dicta doloribus corrupti quibusdam autem mollitia labore blanditiis est! Temporibus incidunt aliquam voluptatibus cupiditate tempora necessitatibus.<br><br>Lorem
+                        ipsum dolor sit, amet consectetur adipisicing elit. Nobis optio atque quibusdam facilis libero qui? Ipsam, ab natus, autem maiores deserunt nemo fugiat eos odit distinctio nam modi harum sequi.
+                    </p>
+                    <ul class="tags">
+                        <li>C#</li>
+                        <li>Javascript</li>
+                        <li>Knouctjs</li>
+                        <li>Express.js</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="others-post" class="box">
+                <h3>İlginizi Çekebilir;</h3>
+                <p class="other">Lorem ipsum dolor sit amet.</p>
+                <p class="other">Lorem ipsum dolor sit amet.</p>
+                <p class="other">Lorem ipsum dolor sit amet.</p>
+                <p class="other">Lorem ipsum dolor sit amet.</p>
+                <p class="other">Lorem ipsum dolor sit amet.</p>
+                <p class="other">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <hr>
+            <div id="authoer-box">
+                <img src="https://randomuser.me/api/portraits/women/78.jpg" alt="">
+                <p class="authoer-text">Clyne Frank</p>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+
+</body>
+
+</html>

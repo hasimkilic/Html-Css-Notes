@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing Uygulaması</title>
+    <style>
+        #box1 {
+            box-sizing: content-box;
+            width: 300px;
+            height: 100px;
+            background-color: green;
+            border: 10px solid black;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            padding: 10px;
+            float: left;
+        }
+        
+        #box2 {
+            box-sizing: border-box;
+            width: 300px;
+            height: 100px;
+            background-color: gold;
+            border: 10px solid black;
+            padding: 10px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+
+</html>

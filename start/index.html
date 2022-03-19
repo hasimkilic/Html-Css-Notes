@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Blog</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/58506c2c0b.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f1f1f1;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 19px;
+            color: #333;
+        }
+        
+        @media screen and (max-width:1000px) {
+            body {
+                font-size: 19px
+            }
+            .container {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (max-width:700px) {
+            body {
+                font-size: 16px;
+            }
+            .container {
+                width: 70%;
+            }
+        }
+        
+        @media screen and (max-width:400px) {
+            body {
+                font-size: 12px;
+            }
+            .container {
+                width: 40%;
+            }
+        }
+        
+        .container {
+            width: 1000px;
+            margin: 0px auto;
+        }
+        
+        #blog-post-container {
+            width: 75%;
+            float: left;
+        }
+        
+        .other {
+            border-bottom: 1px solid rgba(0, 0, 0, .125);
+        }
+        
+        .other:last-child {
+            border-bottom: none;
+        }
+        
+        #other-posts {
+            width: 25%;
+            float: left;
+            padding-left: 20px;
+        }
+        
+        #inner-other-post {
+            border-left: 1px solid rgb(0, 0, 0, 0.9);
+            border-right: 1px solid rgb(0, 0, 0, 0.9);
+        }
+        
+        .p-20 {
+            padding: 20px;
+        }
+        
+        .mt20 {
+            margin-top: 20px;
+        }
+        
+        .box {
+            background-color: white;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px 2px rgba(20, 23, 28, 0.15);
+        }
+        
+        .box p-20 {
+            border-left: 1px solid rgb(0, 0, 0, 0.9);
+            border-right: 1px solid rgb(0, 0, 0, 0.9);
+        }
+        
+        #author-box {
+            border-top: 1px solid rgba(0, 0, 0, .125);
+            padding-top: 10px;
+        }
+        
+        #author-box img {
+            border-radius: 50%;
+            float: left;
+        }
+        
+        .author-text {
+            float: left;
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+        
+        h2 {
+            margin-bottom: 15px;
+        }
+        
+        .blog-post {
+            position: relative;
+            border-radius: 10px;
+        }
+        
+        .blog-post img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 7px;
+            border-bottom-left-radius: 7px;
+            -webkit-transition: all 0.3s;
+            transition: opacity 0.3s linear;
+        }
+        
+        .blog-post img:hover {
+            opacity: 0.9;
+            cursor: pointer;
+        }
+        
+        .date {
+            position: absolute;
+            right: 20px;
+            bottom: 15px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        
+        .tags li {
+            list-style: none;
+            display: inline;
+            margin-right: 5px;
+        }
+        
+        .tags li a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #000;
+            border-radius: 5px;
+            display: inline-block;
+            padding: 4px;
+            text-align: center;
+            transition-delay: 0.1s;
+            transition: background-color 0.3s color 0.3s;
+            -webkit-transition: background-color 0.3s color 0.3s, 0.6s linear;
+        }
+        
+        .tags li a:hover {
+            background-color: rgb(243, 193, 30);
+            color: #000;
+        }
+        
+        .blog-text {
+            margin-top: 15px;
+            margin-bottom: 10px;
+            text-align: justify;
+            text-indent: 15px;
+        }
+        
+        p {
+            word-spacing: 3px;
+            line-height: 1.5em;
+            letter-spacing: 0.5px;
+        }
+        
+        h3 {
+            border-bottom: 2px solid black
+        }
+        
+        i {
+            color: black;
+            width: 10px;
+            height: auto;
+            margin-right: 10px;
+            margin-top: 10px;
+            padding-bottom: 0;
+        }
+        
+        i:hover {
+            opacity: 0.6;
+        }
+        
+        .blog-title {
+            font-weight: 900;
+        }
+        
+        .blog-title a {
+            text-decoration: none;
+            color: rgb(0, 0, 0, 0.8);
+            transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+        }
+        
+        .blog-title a:hover {
+            color: rgb(0, 0, 0, 0.6);
+        }
+        
+        #share {
+            display: inline-block;
+            width: 100%;
+            border-left: 1px solid rgb(0, 0, 0, 0.9);
+            border-right: 1px solid rgb(0, 0, 0, 0.9);
+        }
+        
+        #share i {
+            width: 25px;
+            height: 25px;
+            margin: auto 8px;
+            text-align: center;
+            color: #000;
+        }
+        
+        .h4-style {
+            color: #000;
+            border-bottom: 2px solid black;
+        }
+        
+        .material-icons {
+            margin-right: 15px;
+            margin-left: 15px;
+            margin-top: 20px;
+            padding: auto 8px;
+            cursor: pointer;
+        }
+        /*/Navbars/*/
+        
+        #nav {
+            background-color: #333;
+        }
+        
+        #nav ul {
+            list-style-type: none;
+            overflow: hidden;
+        }
+        
+        #nav li {
+            float: left;
+        }
+        
+        #nav li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        #nav li a:hover {
+            background-color: whitesmoke;
+            color: black;
+            transition: background-color 0.3sn linear;
+        }
+        
+        .active {
+            background-color: #6b35e9;
+            opacity: 0.9;
+            margin: 0px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <div class="container">
+            <ul>
+                <li class="active"><a href="">Home</a></li>
+                <li class="active"><a href="">Article</a></li>
+                <li class="active"><a href="">Contact</a></li>
+                <li class="active"><a href="">Account</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container mt20">
+
+        <div id="blog-post-container">
+
+            <div class="blog-post box">
+                <img src="../start/img/1.jpeg" alt="">
+                <div class="blog-post-body p-20">
+                    <h2 class="blog-title">
+                        <a href="">My first blog post</a>
+                    </h2>
+                    <p class="date">10.10.2018</p>
+
+                    <p class="blog-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ea voluptate qui aliquid est, illum quaerat aut! Dolore qui doloremque culpa suscipit harum molestiae commodi fugiat. Natus hic quos consequuntur.
+                        <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ea voluptate qui aliquid est, illum quaerat aut! Dolore qui doloremque culpa suscipit harum molestiae commodi fugiat. Natus hic quos consequuntur.
+                    </p>
+
+                    <ul class="tags">
+                        <li><a href="">Asp.net</a></li>
+                        <li><a href="">Angular</a></li>
+                        <li><a href="">React</a></li>
+                        <li><a href="">NodeJs</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div id="other-posts">
+
+            <div id="inner-other-post" class="box p-20">
+                <h3>İlginizi Çekebilir;</h3>
+                <p id="icons" class="other">
+                    <a href="#"><i class=" material-icons">build</i></a> Lorem ipsum dolor sit amet.
+                </p>
+                <p id="icons" class="other">
+                    <a href="#"><i class=" material-icons">build</i></a> Lorem ipsum dolor sit amet.
+                </p>
+                <p id="icons" class="other">
+                    <a href="#"><i class=" material-icons">attach_file</i></a> Lorem ipsum dolor sit amet.
+                </p>
+                <p id="icons" class="other">
+                    <a href="#"> <i class=" material-icons">cloud</i></a>
+                    Lorem ipsum dolor sit amet.
+                </p>
+                <p id="icons" class="other">
+                    <a href="#"><i class=" material-icons">comment</i></a> Lorem ipsum dolor sit amet.
+                </p>
+                <p id="icons" class="other">
+                    <a href="#"><i class=" material-icons">credit_card</i></a> Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+            <div id="share" class="box p-20">
+                <h4 class="h4-style">Share</h4>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-facebook-square"></i>
+            </div>
+
+        </div>
+        <div id="blog-post-container">
+
+            <div class="blog-post box">
+                <img src="../start/img/1.jpeg" alt="">
+                <div class="blog-post-body p-20">
+                    <h2 class="blog-title">
+                        <a href="">My first blog post</a>
+                    </h2>
+                    <p class="date">10.10.2018</p>
+
+                    <p class="blog-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ea voluptate qui aliquid est, illum quaerat aut! Dolore qui doloremque culpa suscipit harum molestiae commodi fugiat. Natus hic quos consequuntur.
+                        <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ea voluptate qui aliquid est, illum quaerat aut! Dolore qui doloremque culpa suscipit harum molestiae commodi fugiat. Natus hic quos consequuntur.
+                    </p>
+
+                    <ul class="tags">
+                        <li><a href="">Asp.net</a></li>
+                        <li><a href="">Angular</a></li>
+                        <li><a href="">React</a></li>
+                        <li><a href="">NodeJs</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div id="blog-post-container">
+
+            <div class="blog-post box">
+                <img src="../start/img/1.jpeg" alt="">
+                <div class="blog-post-body p-20">
+                    <h2 class="blog-title">
+                        <a href="">My first blog post</a>
+                    </h2>
+                    <p class="date">10.10.2018</p>
+
+                    <p class="blog-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ea voluptate qui aliquid est, illum quaerat aut! Dolore qui doloremque culpa suscipit harum molestiae commodi fugiat. Natus hic quos consequuntur.
+                        <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ea voluptate qui aliquid est, illum quaerat aut! Dolore qui doloremque culpa suscipit harum molestiae commodi fugiat. Natus hic quos consequuntur.
+                    </p>
+
+                    <ul class="tags">
+                        <li><a href="">Asp.net</a></li>
+                        <li><a href="">Angular</a></li>
+                        <li><a href="">React</a></li>
+                        <li><a href="">NodeJs</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div id="blog-post-container">
+
+            <div class="blog-post box">
+                <img src="../start/img/1.jpeg" alt="">
+                <div class="blog-post-body p-20">
+                    <h2 class="blog-title">
+                        <a href="">My first blog post</a>
+                    </h2>
+                    <p class="date">10.10.2018</p>
+
+                    <p class="blog-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ea voluptate qui aliquid est, illum quaerat aut! Dolore qui doloremque culpa suscipit harum molestiae commodi fugiat. Natus hic quos consequuntur.
+                        <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ea voluptate qui aliquid est, illum quaerat aut! Dolore qui doloremque culpa suscipit harum molestiae commodi fugiat. Natus hic quos consequuntur.
+                    </p>
+
+                    <ul class="tags">
+                        <li><a href="">Asp.net</a></li>
+                        <li><a href="">Angular</a></li>
+                        <li><a href="">React</a></li>
+                        <li><a href="">NodeJs</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <div style="clear: both;"></div>
+
+        <div id="author-box">
+            <img src="img/author.jpg" alt="">
+            <p class="author-text">
+                Caleb Fields
+            </p>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

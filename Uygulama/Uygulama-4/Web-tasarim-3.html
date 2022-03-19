@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemen Üye Ol</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        h1 {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Lütfen Bu Formu Eksiksiz Doldurunuz.</h1>
+    <hr>
+    <h3><u>Hesap Bilgileriniz</u></h3>
+    <form>
+        <p>
+            <b>Kullanıcı Adı:</b><input type="text" name="Kullanıcı Adı" placeholder="Kullanıcı Adı Giriniz" required>
+        </p>
+        <p>
+            <b>E posta:</b><input type="email" name="Email" placeholder="e-posta giriniz" required>
+        </p>
+        <p>
+            <b>Parola:</b><input type="password" name="Şifre" placeholder="Parola giriniz" required>
+        </p>
+        <h3><u>Kişisel Bilgileriniz</u></h3>
+        <p>
+            <b>Ad:</b><input type="text" name="İsim" required>
+        </p>
+        <p>
+            <b>Soyad:</b><input type="text" name="Soyad" required>
+        </p>
+        <p><b>Şehir:</b>
+            <select>
+        <option>Kayseri</option>
+        <option>Ankara</option>
+        <option>İstanbul</option>
+        <option>Trabzon</option>
+        <option>İzmir</option>
+    </select>
+        </p>
+        <p>
+            <b>Cinsiyet:</b>
+            <select required>
+                <option>Erkek</option>
+                <option>Kadın</option>
+                <option>Belirtmek İstemiyorum</option>
+            </select>
+        </p>
+        <p>
+            <b>Hobileriniz:</b> Sinema:
+            <input type="checkbox"> Gezmek:
+            <input type="checkbox"> Spor:
+            <input type="checkbox"> Kitap:
+            <input type="checkbox">
+        </p>
+        <p>
+            <input type="submit" value="Kaydet">
+        </p>
+    </form>
+
+</body>
+
+</html>

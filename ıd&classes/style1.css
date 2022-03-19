@@ -1,0 +1,26 @@
+p {
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+
+.f40 {
+    font-size: 40px;
+    text-align: center;
+    background-color: pink;
+    margin-top: 50px;
+}
+
+.red {
+    color: red;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.blue {
+    color: blue;
+    text-decoration: brown;
+    font-size: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
